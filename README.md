@@ -2,7 +2,7 @@
 
 <img src="./src/assets/images/screen.png" alt="Screen of the application"/>
 
-<h2 align="center"><a color="white" href="https://hexGame.vercel.app/">Acess HEX Game</a></h2>
+<h2 align="center"><a color="white" href="https://hex-game-one.vercel.app/">Acess HEX Game</a></h2>
 
 ### 📕 About
 
