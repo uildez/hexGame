@@ -28,6 +28,7 @@ export const Game = () => {
               className={`flex items-center justify-center w-2/4 h-[250px] rounded-md`}
               style={{ backgroundColor: `#${selectedColor}` }}
             />
+            {selectedColor}
             <Buttons />
           </>
         )}

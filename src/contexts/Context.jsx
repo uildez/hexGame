@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 export const Context = createContext({});
 
@@ -8,9 +9,9 @@ export const ContextProvider = ({ children }) => {
   const [startGame, setStartGame] = useState(false);
   const [score, setScore] = useState(0);
   const [selectedColor, setSelectedColor] = useState();
-  const [highScore, setHighScore] = useState([]);
+  const [highScore, setHighScore] = useLocalStorage("HIGH-SCORE", []);
   const [randomColors, setRandomColors] = useState([]);
-  const [history, setHistory] = useState([]);
+  const [history, setHistory] = useLocalStorage("HISTORY", []);
 
   // Get Random Colors
   const getRandomHex = () => {
@@ -65,9 +66,7 @@ export const ContextProvider = ({ children }) => {
     ]);
     setHistory([]);
   }
-
-  decreseTime()
-
+  
   const verifyAnswer = (e, timeLeft) => {
     if (e === selectedColor) {
       const timeResponse = timeAnswer - timeLeft 
@@ -88,6 +87,8 @@ export const ContextProvider = ({ children }) => {
     } else {
       const timeResponse = timeAnswer - timeLeft 
       setTimeAnswer(timeLeft)
+      
+      setRandomColors([])
 
       setScore(score - 1);
       setHistory([
@@ -99,6 +100,7 @@ export const ContextProvider = ({ children }) => {
           time: timeResponse,
         },
       ]);
+
     }
   }
 
@@ -112,9 +114,12 @@ export const ContextProvider = ({ children }) => {
       },
     ]);
 
+    console.log("highscore", highScore)
+    console.log(typeof(highScore))
+
     setScore(0);
   }, [timeLeft === 0]);
-
+  
   return (
     <Context.Provider
       value={{
