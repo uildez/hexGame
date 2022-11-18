@@ -23,7 +23,7 @@ export const Navbar = () => {
         <div className='flex flex-col justify-center gap-2 text-center py-2 px-4'>
           <div className='flex items-center justify-between gap-2'>
             <p className='font-bold'>High Score</p>
-            <h2 className='text-2xl font-bold'>{Math.max.apply(Math, highScore.map(function(o) { return o.highScore; }))}</h2>
+            <h2 className='text-2xl font-bold'>{Math.max.apply(Math, highScore?.map(function(o) { return o.highScore; }))}</h2>
           </div>
           <span className='w-full h-[2px] bg-slate-800'></span>
           <div className='flex items-center justify-between gap-2'>

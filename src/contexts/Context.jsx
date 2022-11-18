@@ -4,12 +4,35 @@ export const Context = createContext({});
 
 export const ContextProvider = ({ children }) => {
   const [timeLeft, setTimeLeft] = useState(null);
+  const [timeAnswer, setTimeAnswer] = useState(30);
+  const [startGame, setStartGame] = useState(false);
   const [score, setScore] = useState(0);
+  const [selectedColor, setSelectedColor] = useState();
   const [highScore, setHighScore] = useState([]);
-  const [randomColor, setRandomColor] = useState();
-  const [secondRandomColor, setSecondRandomColor] = useState();
-  const [thirdRandomColor, setThirdRandomColor] = useState();
+  const [randomColors, setRandomColors] = useState([]);
   const [history, setHistory] = useState([]);
+
+  // Get Random Colors
+  const getRandomHex = () => {
+    return (Math.floor(Math.random() * 16777215).toString(16));
+  }
+  
+  const start = () => {
+    setStartGame(true)
+    setTimeLeft(30);
+    setHistory([])
+  }
+
+  useEffect(() => {
+    if(randomColors.length < 3 ) {
+      setRandomColors((prev) => [...prev, getRandomHex()])
+    }
+    else if(randomColors.length = 3 ){
+      const randomIndex = Math.floor(Math.random() * randomColors.length) 
+      setSelectedColor(randomColors[randomIndex])
+    }
+  }, [randomColors.length])
+  
 
   // Set Timer
   useEffect(() => {
@@ -26,20 +49,10 @@ export const ContextProvider = ({ children }) => {
     return () => clearInterval(intervalId);
   }, [timeLeft]);
 
-  function start() {
-    setTimeLeft(5);
-    randomColors();
-  }
-
-  function randomColors() {
-    setRandomColor(Math.floor(Math.random() * 16777215).toString(16));
-    setSecondRandomColor(Math.floor(Math.random() * 16777215).toString(16));
-    setThirdRandomColor(Math.floor(Math.random() * 16777215).toString(16));
-  }
-
   function reset() {
     setScore(0);
     setTimeLeft(null);
+    setRandomColors([])
   }
 
   function resetGame() {
@@ -53,38 +66,39 @@ export const ContextProvider = ({ children }) => {
     setHistory([]);
   }
 
-  // function noAnswer(){
-  //   if (timeLeft === 20){
-  //     setScore(score - 2);
-  //   }
-  // }
+  decreseTime()
 
-  function verifyAnswer(e) {
-    if (e === randomColor) {
+  const verifyAnswer = (e, timeLeft) => {
+    if (e === selectedColor) {
+      const timeResponse = timeAnswer - timeLeft 
+      setTimeAnswer(timeLeft)
+
       setScore(score + 5);
+      
       setHistory([
         ...history,
         {
           status: "correct",
-          correctColor: randomColor,
-          time: timeLeft, 
+          correctColor: selectedColor,
+          time: timeResponse,
         },
-      ]);
+      ])
 
-      randomColors();
-    }else {
+      setRandomColors([])
+    } else {
+      const timeResponse = timeAnswer - timeLeft 
+      setTimeAnswer(timeLeft)
+
       setScore(score - 1);
       setHistory([
         ...history,
         {
           status: "wrong",
           selectColor: e,
-          correctColor: randomColor,
-          time: timeLeft, 
+          correctColor: selectedColor,
+          time: timeResponse,
         },
       ]);
-
-      randomColors();
     }
   }
 
@@ -108,10 +122,9 @@ export const ContextProvider = ({ children }) => {
         setTimeLeft,
         score,
         setScore,
-        randomColor,
-        setRandomColor,
-        secondRandomColor,
-        thirdRandomColor,
+        randomColors,
+        selectedColor, 
+        setSelectedColor,
         start,
         verifyAnswer,
         setHistory,

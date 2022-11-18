@@ -1,6 +1,7 @@
-import { Navbar } from "./components/Navbar"
-import { Game } from "./components/Game"
-import { Sidebar } from "./components/Sidebar"
+import { Navbar } from "./components/Navbar";
+import { Game } from "./components/Game";
+import { Sidebar } from "./components/Sidebar";
+import { X } from "phosphor-react";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Game />
       </div>
     </div>
-  ) 
+  );
 }
 
-export default App
+export default App;
