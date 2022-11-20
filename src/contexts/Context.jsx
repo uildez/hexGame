@@ -8,10 +8,17 @@ export const ContextProvider = ({ children }) => {
   const [timeAnswer, setTimeAnswer] = useState(30);
   const [startGame, setStartGame] = useState(false);
   const [score, setScore] = useState(0);
+
+  // const [level, setLevel] = useState([{level: 3, value: "Easy"}, {level: 4, value: "Medium"},{level: 6, value: "Hard"}]);
+
+  const [level, setLevel] = useState(3);
   const [selectedColor, setSelectedColor] = useState();
   const [highScore, setHighScore] = useLocalStorage("HIGH-SCORE", []);
   const [randomColors, setRandomColors] = useState([]);
   const [history, setHistory] = useLocalStorage("HISTORY", []);
+  
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [ openModal, setOpenModal ] = useState(false);
 
   // Get Random Colors
   const getRandomHex = () => {
@@ -25,10 +32,10 @@ export const ContextProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    if(randomColors.length < 3 ) {
+    if(randomColors.length < level ) {
       setRandomColors((prev) => [...prev, getRandomHex()])
     }
-    else if(randomColors.length = 3 ){
+    else if(randomColors.length = level ){
       const randomIndex = Math.floor(Math.random() * randomColors.length) 
       setSelectedColor(randomColors[randomIndex])
     }
@@ -114,9 +121,6 @@ export const ContextProvider = ({ children }) => {
       },
     ]);
 
-    console.log("highscore", highScore)
-    console.log(typeof(highScore))
-
     setScore(0);
   }, [timeLeft === 0]);
   
@@ -137,6 +141,10 @@ export const ContextProvider = ({ children }) => {
         resetGame,
         reset,
         highScore,
+        toggleMenu, 
+        setToggleMenu,
+        openModal, 
+        setOpenModal
       }}
     >
       {children}
