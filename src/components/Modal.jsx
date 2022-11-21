@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { Context } from "../contexts/Context";
 
 export const Modal = () => {
-  const { openModal, setOpenModal } = useContext(Context);
+  const { openModal, setOpenModal, options, selected, setSelected } = useContext(Context);
 
   return (
     <>
@@ -49,14 +49,22 @@ export const Modal = () => {
                   </li>
                 </ul>
               </div>
-              <p className="text-center text-slate-200 font-bold mt-4 mb-2">Difficulty</p>
-              <select className="text-center w-full px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-md transition-all ease-in-out cursor-pointer">
-                <option className="px-4" selected value="coconut">
-                  Easy
-                </option>
-                <option className="px-4" value="grapefruit">Medium</option>
-                <option className="px-4" value="lime">Hard</option>
-              </select>
+              <p className="text-center text-slate-200 font-bold mt-4 mb-2">
+                Difficulty
+              </p>
+                <select
+                  className="text-center w-full px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-md transition-all ease-in-out cursor-pointer"
+                  value={selected}
+                  onChange={(e) => setSelected(e.target.value)}
+                >
+                  {options.map((value) => (
+                    <option className="px-4" value={value} key={value}>
+                      {value === 2 && "Easy"}
+                      {value === 3 && "Medium"}
+                      {value === 6 && "Hard"}
+                    </option>
+                  ))}
+                </select>
             </div>
           </div>
         </>

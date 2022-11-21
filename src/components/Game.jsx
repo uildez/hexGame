@@ -1,11 +1,16 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Context } from "../contexts/Context";
 import { Play } from "phosphor-react";
 import { Buttons } from "./Buttons";
 
 export const Game = () => {
-  const { timeLeft, randomColors, start, selectedColor, setSelectedColor } =
-    useContext(Context);
+  const ref = useRef(null);
+  const { timeLeft, start, selectedColor, selected } = useContext(Context);
+
+  const width = ref.current ? ref.current.offsetWidth : 0;
+  const percent = timeLeft / 30
+
+  let progress = width * percent;
 
   return (
     <>
@@ -25,9 +30,15 @@ export const Game = () => {
         ) : (
           <>
             <div
-              className={`flex items-center justify-center md:w-2/4 w-full h-[250px] rounded-md`}
+              ref={ref}
+              className={`bar flex items-center justify-center md:w-2/4 w-full h-[250px] rounded-md relative overflow-hidden`}
               style={{ backgroundColor: `#${selectedColor}` }}
-            />
+            >
+              <div
+                style={{ width: `${progress}px` }}
+                className={`h-[10px] ${progress > 200 ? "bg-green-500" : "bg-red-500"}  w-full absolute top-0 transition-all ease-in-out`}
+              />
+            </div>
             <Buttons />
           </>
         )}

@@ -27,13 +27,13 @@ export const Sidebar = () => {
           className="absolute md:hidden right-4 top-12 text-slate-200 bg-slate-600 rounded-md p-1"
         />
         <div className="grid grid-cols-3 w-full justify-center items-center bg-slate-600 rounded-md md:mt-0 mt-20">
-          <p className="text-center text-slate-100 text-sm py-2">
+          <p className="text-center text-slate-100 text-sm py-2 px-4">
             Guessed color
           </p>
-          <p className="flex items-center text-center text-sm h-full px-4 bg-slate-400 text-slate-700 rounded-md">
+          <p className="flex items-center text-center text-sm h-full py-2 px-4 bg-slate-400 text-slate-700 rounded-md">
             Corrent color
           </p>
-          <p className="text-center text-slate-100 text-sm py-2">Score</p>
+          <p className="text-center text-slate-100 text-sm py-2 px-4">Score</p>
         </div>
         <div className="w-full max-h-[70%] overflow-y-auto my-4">
           {history?.length > 0 ? (
