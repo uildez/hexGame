@@ -28,7 +28,7 @@ export const ContextProvider = ({ children }) => {
   const start = () => {
     setStartGame(true)
     setTimeLeft(30);
-    setHistory([])
+    setRandomColors([])
   }
 
   useEffect(() => {
@@ -88,6 +88,7 @@ export const ContextProvider = ({ children }) => {
       setTimeAnswer(timeLeft)
 
       setScore(score + 5);
+      setTimeLeft((prev) => prev + 2)
       
       setHistory([
         ...history,
@@ -104,8 +105,9 @@ export const ContextProvider = ({ children }) => {
       setTimeAnswer(timeLeft)
       
       setRandomColors([])
-
       setScore(score - 1);
+      setTimeLeft((prev) => prev - 2)
+      
       setHistory([
         ...history,
         {

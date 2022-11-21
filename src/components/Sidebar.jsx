@@ -50,7 +50,7 @@ export const Sidebar = () => {
                       {item.status === "correct" ? (
                         <div className="grid grid-cols-3 w-full justify-between items-center bg-slate-600 rounded-md overflow-hidden">
                           <span
-                            className="flex items-center justify-center col-span-2 text-sm text-white px-4 w-full h-[60px]"
+                            className="flex items-center justify-center col-span-2 text-sm text-white px-4 w-full h-[60px] [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]"
                             style={{
                               backgroundColor: `#${item.correctColor}`,
                             }}
@@ -70,7 +70,7 @@ export const Sidebar = () => {
                       ) : (
                         <div className="grid grid-cols-3 w-full justify-between items-center bg-slate-600 rounded-md overflow-hidden">
                           <span
-                            className="flex items-center justify-center text-sm text-white px-4 h-[60px]"
+                            className="flex items-center justify-center text-sm text-white px-4 h-[60px] [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]"
                             style={{
                               backgroundColor: `#${item.selectColor}`,
                             }}
@@ -78,7 +78,7 @@ export const Sidebar = () => {
                             #{item.selectColor}
                           </span>
                           <span
-                            className="flex items-center justify-center text-sm text-white px-4 h-[60px]"
+                            className="flex items-center justify-center text-sm text-white px-4 h-[60px] [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]"
                             style={{
                               backgroundColor: `#${item.correctColor}`,
                             }}
