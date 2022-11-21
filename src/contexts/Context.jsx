@@ -72,6 +72,15 @@ export const ContextProvider = ({ children }) => {
     ]);
     setHistory([]);
   }
+
+  useEffect(() => {
+    const time = timeAnswer
+
+    if(timeLeft === 20 && history.length <= 0 || timeLeft === time - 10){
+      setScore((prev) => prev - 2)
+      setRandomColors([])
+    } 
+  }, [timeLeft])
   
   const verifyAnswer = (e, timeLeft) => {
     if (e === selectedColor) {
