@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../contexts/Context";
 import { CheckCircle, Gear, X, XCircle } from "phosphor-react";
 

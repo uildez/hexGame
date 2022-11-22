@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useRef } from "react";
 import { Context } from "../contexts/Context";
 import { Play } from "phosphor-react";
 import { Buttons } from "./Buttons";

@@ -11,7 +11,7 @@ export const Buttons = () => {
       <div
         className={`grid ${selected == 2 ? "md:grid-cols-2 grid-cols-1" : "md:grid-cols-3 grid-cols-1"} gap-2 items-center justify-center md:w-2/4 w-full mt-4`}
       >
-        {randomColors.map((item, index) => {
+        {randomColors?.map((item, index) => {
           return (
             <button
               key={index}

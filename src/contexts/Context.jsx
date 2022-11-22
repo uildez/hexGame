@@ -6,7 +6,6 @@ export const Context = createContext({});
 export const ContextProvider = ({ children }) => {
   const [timeLeft, setTimeLeft] = useState(null);
   const [timeAnswer, setTimeAnswer] = useState(30);
-  const [startGame, setStartGame] = useState(false);
   const [score, setScore] = useState(0);
 
   const options = [2, 3, 6];
@@ -26,7 +25,6 @@ export const ContextProvider = ({ children }) => {
   }
   
   const start = () => {
-    setStartGame(true)
     setTimeLeft(30);
     setRandomColors([])
   }
@@ -41,20 +39,26 @@ export const ContextProvider = ({ children }) => {
     }
   }, [randomColors.length, selected])
   
-  // Set Timer
+  // Set Timer  
   useEffect(() => {
     if (timeLeft === 0) {
       setTimeLeft(null);
     }
 
     if (!timeLeft) return;
-
+    
     const intervalId = setInterval(() => {
       setTimeLeft(timeLeft - 1);
     }, 1000);
-
+    
     return () => clearInterval(intervalId);
   }, [timeLeft]);
+  
+  useEffect(() => {
+    if (timeLeft < 0) {
+      setTimeLeft(null);
+    }
+  }, [timeLeft])
 
   function reset() {
     setScore(0);
@@ -95,7 +99,7 @@ export const ContextProvider = ({ children }) => {
         {
           status: "correct",
           correctColor: selectedColor,
-          time: timeResponse,
+          time: Math.abs(timeResponse),
         },
       ])
 
@@ -114,9 +118,11 @@ export const ContextProvider = ({ children }) => {
           status: "wrong",
           selectColor: e,
           correctColor: selectedColor,
-          time: timeResponse,
+          time: Math.abs(timeResponse),
         },
       ]);
+
+      console.log(typeof(timeResponse))
 
     }
   }
