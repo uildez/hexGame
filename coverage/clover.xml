@@ -1,42 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1669151504037" clover="3.2.0">
-  <project timestamp="1669151504037" name="All files">
-    <metrics statements="292" coveredstatements="69" conditionals="7" coveredconditionals="2" methods="5" coveredmethods="2" elements="304" coveredelements="73" complexity="0" loc="292" ncloc="292" packages="3" files="4" classes="4"/>
+<coverage generated="1669407363811" clover="3.2.0">
+  <project timestamp="1669407363811" name="All files">
+    <metrics statements="303" coveredstatements="78" conditionals="7" coveredconditionals="2" methods="5" coveredmethods="2" elements="315" coveredelements="82" complexity="0" loc="303" ncloc="303" packages="3" files="4" classes="4"/>
     <package name="components">
-      <metrics statements="76" coveredstatements="57" conditionals="7" coveredconditionals="2" methods="3" coveredmethods="2"/>
+      <metrics statements="87" coveredstatements="66" conditionals="7" coveredconditionals="2" methods="3" coveredmethods="2"/>
       <file name="Buttons.jsx" path="C:\Users\Uildes\Documents\Web Projects\hexGame\hexGame\src\components\Buttons.jsx">
-        <metrics statements="28" coveredstatements="19" conditionals="3" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-      </file>
-      <file name="Game.jsx" path="C:\Users\Uildes\Documents\Web Projects\hexGame\hexGame\src\components\Game.jsx">
-        <metrics statements="48" coveredstatements="38" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="1"/>
+        <metrics statements="33" coveredstatements="23" conditionals="3" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -46,16 +15,16 @@
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="19" count="0" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="cond" truecount="0" falsecount="1"/>
         <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
@@ -70,34 +39,76 @@
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="39" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
-        <line num="47" count="1" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
       </file>
-    </package>
-    <package name="contexts">
-      <metrics statements="172" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="Context.jsx" path="C:\Users\Uildes\Documents\Web Projects\hexGame\hexGame\src\contexts\Context.jsx">
-        <metrics statements="172" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="Game.jsx" path="C:\Users\Uildes\Documents\Web Projects\hexGame\hexGame\src\components\Game.jsx">
+        <metrics statements="54" coveredstatements="43" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="contexts">
+      <metrics statements="173" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="Context.jsx" path="C:\Users\Uildes\Documents\Web Projects\hexGame\hexGame\src\contexts\Context.jsx">
+        <metrics statements="173" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
@@ -263,12 +274,13 @@
         <line num="170" count="0" type="stmt"/>
         <line num="171" count="0" type="stmt"/>
         <line num="172" count="0" type="stmt"/>
+        <line num="173" count="0" type="stmt"/>
       </file>
     </package>
     <package name="hooks">
-      <metrics statements="44" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="43" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="useLocalStorage.jsx" path="C:\Users\Uildes\Documents\Web Projects\hexGame\hexGame\src\hooks\useLocalStorage.jsx">
-        <metrics statements="44" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="43" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -312,7 +324,6 @@
         <line num="41" count="0" type="stmt"/>
         <line num="42" count="1" type="stmt"/>
         <line num="43" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
       </file>
     </package>
   </project>

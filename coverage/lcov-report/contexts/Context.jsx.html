@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">3.48% </span>
+                <span class="strong">4.04% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/172</span>
+                <span class='fraction'>7/173</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">3.48% </span>
+                <span class="strong">4.04% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/172</span>
+                <span class='fraction'>7/173</span>
             </div>
         
             
@@ -235,12 +235,14 @@
 <a name='L170'></a><a href='#L170'>170</a>
 <a name='L171'></a><a href='#L171'>171</a>
 <a name='L172'></a><a href='#L172'>172</a>
-<a name='L173'></a><a href='#L173'>173</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -407,177 +409,178 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { createContext, useEffect, useState } from "react";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { createContext, useEffect, useState } from "react";
+// eslint-disable-next-line import/no-unresolved
 import useLocalStorage from "../hooks/useLocalStorage";
 &nbsp;
 export const Context = createContext({});
 &nbsp;
 export const ContextProvider = <span class="fstat-no" title="function not covered" >({ children }) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  const [timeLeft, setTimeLeft] = useState(null);</span>
-<span class="cstat-no" title="statement not covered" >  const [timeAnswer, setTimeAnswer] = useState(30);</span>
-<span class="cstat-no" title="statement not covered" >  const [score, setScore] = useState(0);</span>
+<span class="cstat-no" title="statement not covered" >    const [timeLeft, setTimeLeft] = useState(null);</span>
+<span class="cstat-no" title="statement not covered" >    const [timeAnswer, setTimeAnswer] = useState(30);</span>
+<span class="cstat-no" title="statement not covered" >    const [score, setScore] = useState(0);</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  const options = [2, 3, 6];</span>
-<span class="cstat-no" title="statement not covered" >  const [selected, setSelected] = useState(options[1]);</span>
+<span class="cstat-no" title="statement not covered" >    const options = [2, 3, 6];</span>
+<span class="cstat-no" title="statement not covered" >    const [selected, setSelected] = useState(options[1]);</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  const [selectedColor, setSelectedColor] = useState();</span>
-<span class="cstat-no" title="statement not covered" >  const [highScore, setHighScore] = useLocalStorage("HIGH-SCORE", []);</span>
-<span class="cstat-no" title="statement not covered" >  const [randomColors, setRandomColors] = useState([]);</span>
-<span class="cstat-no" title="statement not covered" >  const [history, setHistory] = useLocalStorage("HISTORY", []);</span>
-<span class="cstat-no" title="statement not covered" >  </span>
-<span class="cstat-no" title="statement not covered" >  const [toggleMenu, setToggleMenu] = useState(false);</span>
-<span class="cstat-no" title="statement not covered" >  const [ openModal, setOpenModal ] = useState(false);</span>
+<span class="cstat-no" title="statement not covered" >    const [selectedColor, setSelectedColor] = useState();</span>
+<span class="cstat-no" title="statement not covered" >    const [highScore, setHighScore] = useLocalStorage("HIGH-SCORE", []);</span>
+<span class="cstat-no" title="statement not covered" >    const [randomColors, setRandomColors] = useState([]);</span>
+<span class="cstat-no" title="statement not covered" >    const [history, setHistory] = useLocalStorage("HISTORY", []);</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  // Get Random Colors</span>
-<span class="cstat-no" title="statement not covered" >  const getRandomHex = () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    return (Math.floor(Math.random() * 16777215).toString(16));</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
-<span class="cstat-no" title="statement not covered" >  </span>
-<span class="cstat-no" title="statement not covered" >  const start = () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    setTimeLeft(30);</span>
-<span class="cstat-no" title="statement not covered" >    setRandomColors([])</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" >    const [toggleMenu, setToggleMenu] = useState(false);</span>
+<span class="cstat-no" title="statement not covered" >    const [openModal, setOpenModal] = useState(false);</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  useEffect(() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    if(randomColors.length &lt; selected ) {</span>
-<span class="cstat-no" title="statement not covered" >      setRandomColors((prev) =&gt; [...prev, getRandomHex()])</span>
+<span class="cstat-no" title="statement not covered" >    // Get Random Colors</span>
+<span class="cstat-no" title="statement not covered" >    const getRandomHex = () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return Math.floor(Math.random() * 16777215).toString(16);</span>
+<span class="cstat-no" title="statement not covered" >    };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    const start = () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        setTimeLeft(30);</span>
+<span class="cstat-no" title="statement not covered" >        setRandomColors([]);</span>
+<span class="cstat-no" title="statement not covered" >    };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    useEffect(() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (randomColors.length &lt; selected) {</span>
+<span class="cstat-no" title="statement not covered" >            setRandomColors((prev) =&gt; [...prev, getRandomHex()]);</span>
+<span class="cstat-no" title="statement not covered" >        } else if ((randomColors.length = selected)) {</span>
+<span class="cstat-no" title="statement not covered" >            const randomIndex = Math.floor(Math.random() * randomColors.length);</span>
+<span class="cstat-no" title="statement not covered" >            setSelectedColor(randomColors[randomIndex]);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }, [randomColors.length, selected]);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    // Set Timer</span>
+<span class="cstat-no" title="statement not covered" >    useEffect(() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (timeLeft === 0) {</span>
+<span class="cstat-no" title="statement not covered" >            setTimeLeft(null);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (!timeLeft) return;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        const intervalId = setInterval(() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            setTimeLeft(timeLeft - 1);</span>
+<span class="cstat-no" title="statement not covered" >        }, 1000);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        return () =&gt; clearInterval(intervalId);</span>
+<span class="cstat-no" title="statement not covered" >    }, [timeLeft]);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    useEffect(() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (timeLeft &lt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            setTimeLeft(null);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }, [timeLeft]);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    function reset() {</span>
+<span class="cstat-no" title="statement not covered" >        setScore(0);</span>
+<span class="cstat-no" title="statement not covered" >        setTimeLeft(null);</span>
+<span class="cstat-no" title="statement not covered" >        setRandomColors([]);</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" >    else if(randomColors.length = selected ){</span>
-<span class="cstat-no" title="statement not covered" >      const randomIndex = Math.floor(Math.random() * randomColors.length) </span>
-<span class="cstat-no" title="statement not covered" >      setSelectedColor(randomColors[randomIndex])</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    function resetGame() {</span>
+<span class="cstat-no" title="statement not covered" >        setScore(0);</span>
+<span class="cstat-no" title="statement not covered" >        setTimeLeft(null);</span>
+<span class="cstat-no" title="statement not covered" >        setHighScore([</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                index: highScore.length + 1,</span>
+<span class="cstat-no" title="statement not covered" >                highScore: 0,</span>
+<span class="cstat-no" title="statement not covered" >            },</span>
+<span class="cstat-no" title="statement not covered" >        ]);</span>
+<span class="cstat-no" title="statement not covered" >        setHistory([]);</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" >  }, [randomColors.length, selected])</span>
-<span class="cstat-no" title="statement not covered" >  </span>
-<span class="cstat-no" title="statement not covered" >  // Set Timer  </span>
-<span class="cstat-no" title="statement not covered" >  useEffect(() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    if (timeLeft === 0) {</span>
-<span class="cstat-no" title="statement not covered" >      setTimeLeft(null);</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    if (!timeLeft) return;</span>
-<span class="cstat-no" title="statement not covered" >    </span>
-<span class="cstat-no" title="statement not covered" >    const intervalId = setInterval(() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      setTimeLeft(timeLeft - 1);</span>
-<span class="cstat-no" title="statement not covered" >    }, 1000);</span>
-<span class="cstat-no" title="statement not covered" >    </span>
-<span class="cstat-no" title="statement not covered" >    return () =&gt; clearInterval(intervalId);</span>
-<span class="cstat-no" title="statement not covered" >  }, [timeLeft]);</span>
-<span class="cstat-no" title="statement not covered" >  </span>
-<span class="cstat-no" title="statement not covered" >  useEffect(() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    if (timeLeft &lt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >      setTimeLeft(null);</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" >  }, [timeLeft])</span>
+<span class="cstat-no" title="statement not covered" >    useEffect(() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        const time = timeAnswer;</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  function reset() {</span>
-<span class="cstat-no" title="statement not covered" >    setScore(0);</span>
-<span class="cstat-no" title="statement not covered" >    setTimeLeft(null);</span>
-<span class="cstat-no" title="statement not covered" >    setRandomColors([])</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" >        if (</span>
+<span class="cstat-no" title="statement not covered" >            (timeLeft === 20 &amp;&amp; history.length &lt;= 0) ||</span>
+<span class="cstat-no" title="statement not covered" >            timeLeft === time - 10</span>
+<span class="cstat-no" title="statement not covered" >        ) {</span>
+<span class="cstat-no" title="statement not covered" >            setScore((prev) =&gt; prev - 2);</span>
+<span class="cstat-no" title="statement not covered" >            setRandomColors([]);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }, [timeLeft]);</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  function resetGame() {</span>
-<span class="cstat-no" title="statement not covered" >    setScore(0);</span>
-<span class="cstat-no" title="statement not covered" >    setHighScore([</span>
-<span class="cstat-no" title="statement not covered" >      {</span>
-<span class="cstat-no" title="statement not covered" >        index: highScore.length + 1,</span>
-<span class="cstat-no" title="statement not covered" >        highScore: 0,</span>
-<span class="cstat-no" title="statement not covered" >      },</span>
-<span class="cstat-no" title="statement not covered" >    ]);</span>
-<span class="cstat-no" title="statement not covered" >    setHistory([]);</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" >    const verifyAnswer = (e, timeLeft) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (e === selectedColor) {</span>
+<span class="cstat-no" title="statement not covered" >            const timeResponse = timeAnswer - timeLeft;</span>
+<span class="cstat-no" title="statement not covered" >            setTimeAnswer(timeLeft);</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  useEffect(() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    const time = timeAnswer</span>
+<span class="cstat-no" title="statement not covered" >            setScore(score + 5);</span>
+<span class="cstat-no" title="statement not covered" >            setTimeLeft((prev) =&gt; prev + 2);</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    if(timeLeft === 20 &amp;&amp; history.length &lt;= 0 || timeLeft === time - 10){</span>
-<span class="cstat-no" title="statement not covered" >      setScore((prev) =&gt; prev - 2)</span>
-<span class="cstat-no" title="statement not covered" >      setRandomColors([])</span>
-<span class="cstat-no" title="statement not covered" >    } </span>
-<span class="cstat-no" title="statement not covered" >  }, [timeLeft])</span>
-<span class="cstat-no" title="statement not covered" >  </span>
-<span class="cstat-no" title="statement not covered" >  const verifyAnswer = (e, timeLeft) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    if (e === selectedColor) {</span>
-<span class="cstat-no" title="statement not covered" >      const timeResponse = timeAnswer - timeLeft </span>
-<span class="cstat-no" title="statement not covered" >      setTimeAnswer(timeLeft)</span>
+<span class="cstat-no" title="statement not covered" >            setHistory([</span>
+<span class="cstat-no" title="statement not covered" >                ...history,</span>
+<span class="cstat-no" title="statement not covered" >                {</span>
+<span class="cstat-no" title="statement not covered" >                    status: "correct",</span>
+<span class="cstat-no" title="statement not covered" >                    correctColor: selectedColor,</span>
+<span class="cstat-no" title="statement not covered" >                    time: Math.abs(timeResponse),</span>
+<span class="cstat-no" title="statement not covered" >                },</span>
+<span class="cstat-no" title="statement not covered" >            ]);</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >      setScore(score + 5);</span>
-<span class="cstat-no" title="statement not covered" >      setTimeLeft((prev) =&gt; prev + 2)</span>
-<span class="cstat-no" title="statement not covered" >      </span>
-<span class="cstat-no" title="statement not covered" >      setHistory([</span>
-<span class="cstat-no" title="statement not covered" >        ...history,</span>
-<span class="cstat-no" title="statement not covered" >        {</span>
-<span class="cstat-no" title="statement not covered" >          status: "correct",</span>
-<span class="cstat-no" title="statement not covered" >          correctColor: selectedColor,</span>
-<span class="cstat-no" title="statement not covered" >          time: Math.abs(timeResponse),</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >      ])</span>
+<span class="cstat-no" title="statement not covered" >            setRandomColors([]);</span>
+<span class="cstat-no" title="statement not covered" >        } else {</span>
+<span class="cstat-no" title="statement not covered" >            const timeResponse = timeAnswer - timeLeft;</span>
+<span class="cstat-no" title="statement not covered" >            setTimeAnswer(timeLeft);</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >      setRandomColors([])</span>
-<span class="cstat-no" title="statement not covered" >    } else {</span>
-<span class="cstat-no" title="statement not covered" >      const timeResponse = timeAnswer - timeLeft </span>
-<span class="cstat-no" title="statement not covered" >      setTimeAnswer(timeLeft)</span>
-<span class="cstat-no" title="statement not covered" >      </span>
-<span class="cstat-no" title="statement not covered" >      setRandomColors([])</span>
-<span class="cstat-no" title="statement not covered" >      setScore(score - 1);</span>
-<span class="cstat-no" title="statement not covered" >      setTimeLeft((prev) =&gt; prev - 2)</span>
-<span class="cstat-no" title="statement not covered" >      </span>
-<span class="cstat-no" title="statement not covered" >      setHistory([</span>
-<span class="cstat-no" title="statement not covered" >        ...history,</span>
-<span class="cstat-no" title="statement not covered" >        {</span>
-<span class="cstat-no" title="statement not covered" >          status: "wrong",</span>
-<span class="cstat-no" title="statement not covered" >          selectColor: e,</span>
-<span class="cstat-no" title="statement not covered" >          correctColor: selectedColor,</span>
-<span class="cstat-no" title="statement not covered" >          time: Math.abs(timeResponse),</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >      ]);</span>
+<span class="cstat-no" title="statement not covered" >            setRandomColors([]);</span>
+<span class="cstat-no" title="statement not covered" >            setScore(score - 1);</span>
+<span class="cstat-no" title="statement not covered" >            setTimeLeft((prev) =&gt; prev - 2);</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >      console.log(typeof(timeResponse))</span>
+<span class="cstat-no" title="statement not covered" >            setHistory([</span>
+<span class="cstat-no" title="statement not covered" >                ...history,</span>
+<span class="cstat-no" title="statement not covered" >                {</span>
+<span class="cstat-no" title="statement not covered" >                    status: "wrong",</span>
+<span class="cstat-no" title="statement not covered" >                    selectColor: e,</span>
+<span class="cstat-no" title="statement not covered" >                    correctColor: selectedColor,</span>
+<span class="cstat-no" title="statement not covered" >                    time: Math.abs(timeResponse),</span>
+<span class="cstat-no" title="statement not covered" >                },</span>
+<span class="cstat-no" title="statement not covered" >            ]);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    };</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" >    // Set High Score</span>
+<span class="cstat-no" title="statement not covered" >    useEffect(() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        setHighScore([</span>
+<span class="cstat-no" title="statement not covered" >            ...highScore,</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                index: highScore.length + 1,</span>
+<span class="cstat-no" title="statement not covered" >                highScore: score,</span>
+<span class="cstat-no" title="statement not covered" >            },</span>
+<span class="cstat-no" title="statement not covered" >        ]);</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  // Set High Score</span>
-<span class="cstat-no" title="statement not covered" >  useEffect(() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    setHighScore([</span>
-<span class="cstat-no" title="statement not covered" >      ...highScore,</span>
-<span class="cstat-no" title="statement not covered" >      {</span>
-<span class="cstat-no" title="statement not covered" >        index: highScore.length + 1,</span>
-<span class="cstat-no" title="statement not covered" >        highScore: score,</span>
-<span class="cstat-no" title="statement not covered" >      },</span>
-<span class="cstat-no" title="statement not covered" >    ]);</span>
+<span class="cstat-no" title="statement not covered" >        setScore(0);</span>
+<span class="cstat-no" title="statement not covered" >    }, [timeLeft === 0]);</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    setScore(0);</span>
-<span class="cstat-no" title="statement not covered" >  }, [timeLeft === 0]);</span>
-<span class="cstat-no" title="statement not covered" >  </span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
-<span class="cstat-no" title="statement not covered" >    &lt;Context.Provider</span>
-<span class="cstat-no" title="statement not covered" >      value={{</span>
-<span class="cstat-no" title="statement not covered" >        timeLeft,</span>
-<span class="cstat-no" title="statement not covered" >        setTimeLeft,</span>
-<span class="cstat-no" title="statement not covered" >        score,</span>
-<span class="cstat-no" title="statement not covered" >        setScore,</span>
-<span class="cstat-no" title="statement not covered" >        randomColors,</span>
-<span class="cstat-no" title="statement not covered" >        selectedColor, </span>
-<span class="cstat-no" title="statement not covered" >        setSelectedColor,</span>
-<span class="cstat-no" title="statement not covered" >        start,</span>
-<span class="cstat-no" title="statement not covered" >        verifyAnswer,</span>
-<span class="cstat-no" title="statement not covered" >        setHistory,</span>
-<span class="cstat-no" title="statement not covered" >        history,</span>
-<span class="cstat-no" title="statement not covered" >        resetGame,</span>
-<span class="cstat-no" title="statement not covered" >        reset,</span>
-<span class="cstat-no" title="statement not covered" >        highScore,</span>
-<span class="cstat-no" title="statement not covered" >        toggleMenu, </span>
-<span class="cstat-no" title="statement not covered" >        setToggleMenu,</span>
-<span class="cstat-no" title="statement not covered" >        openModal, </span>
-<span class="cstat-no" title="statement not covered" >        setOpenModal,</span>
-<span class="cstat-no" title="statement not covered" >        options,</span>
-<span class="cstat-no" title="statement not covered" >        selected,</span>
-<span class="cstat-no" title="statement not covered" >        setSelected</span>
-<span class="cstat-no" title="statement not covered" >      }}</span>
-<span class="cstat-no" title="statement not covered" >    &gt;</span>
-<span class="cstat-no" title="statement not covered" >      {children}</span>
-<span class="cstat-no" title="statement not covered" >    &lt;/Context.Provider&gt;</span>
-<span class="cstat-no" title="statement not covered" >  );</span>
+<span class="cstat-no" title="statement not covered" >    return (</span>
+<span class="cstat-no" title="statement not covered" >        &lt;Context.Provider</span>
+<span class="cstat-no" title="statement not covered" >            value={{</span>
+<span class="cstat-no" title="statement not covered" >                timeLeft,</span>
+<span class="cstat-no" title="statement not covered" >                setTimeLeft,</span>
+<span class="cstat-no" title="statement not covered" >                score,</span>
+<span class="cstat-no" title="statement not covered" >                setScore,</span>
+<span class="cstat-no" title="statement not covered" >                randomColors,</span>
+<span class="cstat-no" title="statement not covered" >                selectedColor,</span>
+<span class="cstat-no" title="statement not covered" >                setSelectedColor,</span>
+<span class="cstat-no" title="statement not covered" >                start,</span>
+<span class="cstat-no" title="statement not covered" >                verifyAnswer,</span>
+<span class="cstat-no" title="statement not covered" >                setHistory,</span>
+<span class="cstat-no" title="statement not covered" >                history,</span>
+<span class="cstat-no" title="statement not covered" >                resetGame,</span>
+<span class="cstat-no" title="statement not covered" >                reset,</span>
+<span class="cstat-no" title="statement not covered" >                highScore,</span>
+<span class="cstat-no" title="statement not covered" >                toggleMenu,</span>
+<span class="cstat-no" title="statement not covered" >                setToggleMenu,</span>
+<span class="cstat-no" title="statement not covered" >                openModal,</span>
+<span class="cstat-no" title="statement not covered" >                setOpenModal,</span>
+<span class="cstat-no" title="statement not covered" >                options,</span>
+<span class="cstat-no" title="statement not covered" >                selected,</span>
+<span class="cstat-no" title="statement not covered" >                setSelected,</span>
+<span class="cstat-no" title="statement not covered" >            }}</span>
+<span class="cstat-no" title="statement not covered" >        &gt;</span>
+<span class="cstat-no" title="statement not covered" >            {children}</span>
+<span class="cstat-no" title="statement not covered" >        &lt;/Context.Provider&gt;</span>
+<span class="cstat-no" title="statement not covered" >    );</span>
 <span class="cstat-no" title="statement not covered" >};</span>
 &nbsp;</pre></td></tr></table></pre>
 
@@ -586,7 +589,7 @@ export const ContextProvider = <span class="fstat-no" title="function not covere
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-11-22T21:11:44.013Z
+                at 2022-11-25T20:16:03.786Z
             </div>
         <script src="../prettify.js"></script>
         <script>

@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">13.63% </span>
+                <span class="strong">11.62% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/44</span>
+                <span class='fraction'>5/43</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">13.63% </span>
+                <span class="strong">11.62% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/44</span>
+                <span class='fraction'>5/43</span>
             </div>
         
             
@@ -149,57 +149,57 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import { useState } from "react";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useState } from "react";
 &nbsp;
 // Hook
 <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function useLocalStorage(key, initialValue) {</span></span>
-<span class="cstat-no" title="statement not covered" >  // State to store our value</span>
-<span class="cstat-no" title="statement not covered" >  // Pass initial state function to useState so logic is only executed once</span>
-<span class="cstat-no" title="statement not covered" >  const [storedValue, setStoredValue] = useState(() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    if (typeof window === "undefined") {</span>
-<span class="cstat-no" title="statement not covered" >      return initialValue;</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" >    try {</span>
-<span class="cstat-no" title="statement not covered" >      // Get from local storage by key</span>
-<span class="cstat-no" title="statement not covered" >      const item = window.localStorage.getItem(key);</span>
-<span class="cstat-no" title="statement not covered" >      // Parse stored json or if none return initialValue</span>
-<span class="cstat-no" title="statement not covered" >      return item ? JSON.parse(item) : initialValue;</span>
-<span class="cstat-no" title="statement not covered" >    } catch (error) {</span>
-<span class="cstat-no" title="statement not covered" >      // If error also return initialValue</span>
-<span class="cstat-no" title="statement not covered" >      console.log(error);</span>
-<span class="cstat-no" title="statement not covered" >      return initialValue;</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" >  });</span>
-<span class="cstat-no" title="statement not covered" >  // Return a wrapped version of useState's setter function that ...</span>
-<span class="cstat-no" title="statement not covered" >  // ... persists the new value to localStorage.</span>
-<span class="cstat-no" title="statement not covered" >  const setValue = (value) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    try {</span>
-<span class="cstat-no" title="statement not covered" >      // Allow value to be a function so we have same API as useState</span>
-<span class="cstat-no" title="statement not covered" >      const valueToStore =</span>
-<span class="cstat-no" title="statement not covered" >        value instanceof Function ? value(storedValue) : value;</span>
-<span class="cstat-no" title="statement not covered" >      // Save state</span>
-<span class="cstat-no" title="statement not covered" >      setStoredValue(valueToStore);</span>
-<span class="cstat-no" title="statement not covered" >      // Save to local storage</span>
-<span class="cstat-no" title="statement not covered" >      if (typeof window !== "undefined") {</span>
-<span class="cstat-no" title="statement not covered" >        window.localStorage.setItem(key, JSON.stringify(valueToStore));</span>
-<span class="cstat-no" title="statement not covered" >      }</span>
-<span class="cstat-no" title="statement not covered" >    } catch (error) {</span>
-<span class="cstat-no" title="statement not covered" >      // A more advanced implementation would handle the error case</span>
-<span class="cstat-no" title="statement not covered" >      console.log(error);</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" >  };</span>
-<span class="cstat-no" title="statement not covered" >  return [storedValue, setValue];</span>
+<span class="cstat-no" title="statement not covered" >    // State to store our value</span>
+<span class="cstat-no" title="statement not covered" >    // Pass initial state function to useState so logic is only executed once</span>
+<span class="cstat-no" title="statement not covered" >    const [storedValue, setStoredValue] = useState(() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (typeof window === "undefined") {</span>
+<span class="cstat-no" title="statement not covered" >            return initialValue;</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" >            // Get from local storage by key</span>
+<span class="cstat-no" title="statement not covered" >            const item = window.localStorage.getItem(key);</span>
+<span class="cstat-no" title="statement not covered" >            // Parse stored json or if none return initialValue</span>
+<span class="cstat-no" title="statement not covered" >            return item ? JSON.parse(item) : initialValue;</span>
+<span class="cstat-no" title="statement not covered" >        } catch (error) {</span>
+<span class="cstat-no" title="statement not covered" >            // If error also return initialValue</span>
+<span class="cstat-no" title="statement not covered" >            console.log(error);</span>
+<span class="cstat-no" title="statement not covered" >            return initialValue;</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    });</span>
+<span class="cstat-no" title="statement not covered" >    // Return a wrapped version of useState's setter function that ...</span>
+<span class="cstat-no" title="statement not covered" >    // ... persists the new value to localStorage.</span>
+<span class="cstat-no" title="statement not covered" >    const setValue = (value) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" >            // Allow value to be a function so we have same API as useState</span>
+<span class="cstat-no" title="statement not covered" >            const valueToStore =</span>
+<span class="cstat-no" title="statement not covered" >                value instanceof Function ? value(storedValue) : value;</span>
+<span class="cstat-no" title="statement not covered" >            // Save state</span>
+<span class="cstat-no" title="statement not covered" >            setStoredValue(valueToStore);</span>
+<span class="cstat-no" title="statement not covered" >            // Save to local storage</span>
+<span class="cstat-no" title="statement not covered" >            if (typeof window !== "undefined") {</span>
+<span class="cstat-no" title="statement not covered" >                window.localStorage.setItem(key, JSON.stringify(valueToStore));</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >        } catch (error) {</span>
+<span class="cstat-no" title="statement not covered" >            // A more advanced implementation would handle the error case</span>
+<span class="cstat-no" title="statement not covered" >            console.log(error);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    };</span>
+<span class="cstat-no" title="statement not covered" >    return [storedValue, setValue];</span>
 <span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;
-&nbsp;
-export default useLocalStorage;</pre></td></tr></table></pre>
+export default useLocalStorage;
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-11-22T21:11:44.013Z
+                at 2022-11-25T20:16:03.786Z
             </div>
         <script src="../prettify.js"></script>
         <script>

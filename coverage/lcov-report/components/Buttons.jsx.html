@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">67.85% </span>
+                <span class="strong">69.69% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>19/28</span>
+                <span class='fraction'>23/33</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">67.85% </span>
+                <span class="strong">69.69% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>19/28</span>
+                <span class='fraction'>23/33</span>
             </div>
         
             
@@ -91,7 +91,12 @@
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -101,6 +106,11 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -119,33 +129,38 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
-import { useContext } from "react";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint-disable import/no-unresolved */
+// eslint-disable-next-line no-unused-vars
+import React, { useContext } from "react";
 import { Context } from "../contexts/Context";
 &nbsp;
 export const Buttons = () =&gt; {
-  const { randomColors, verifyAnswer, timeLeft, selected } =
-    useContext(Context);
+    const { randomColors, verifyAnswer, timeLeft, selected } =
+        useContext(Context);
 &nbsp;
-  return (
-    &lt;&gt;
-      &lt;div
-        className={`grid ${selected == 2<span class="branch-0 cbranch-no" title="branch not covered" > ? "md:grid-cols-2 grid-cols-1" </span>: "md:grid-cols-3 grid-cols-1"} gap-2 items-center justify-center md:w-2/4 w-full mt-4`}
-      &gt;
-        {randomColors<span class="branch-0 cbranch-no" title="branch not covered" >?.map((item, index) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >          return (</span>
-<span class="cstat-no" title="statement not covered" >            &lt;button</span>
-<span class="cstat-no" title="statement not covered" >              key={index}</span>
-<span class="cstat-no" title="statement not covered" >              onClick={() =&gt; verifyAnswer(item, timeLeft)}</span>
-<span class="cstat-no" title="statement not covered" >              className="py-4 text-center font-bold border-2 border-slate-400 text-slate-400 hover:scale-105 hover:bg-slate-400 hover:text-slate-700 rounded-md transition-all ease-in-out duration-300"</span>
-<span class="cstat-no" title="statement not covered" >            &gt;</span>
-<span class="cstat-no" title="statement not covered" >              #{item}</span>
-<span class="cstat-no" title="statement not covered" >            &lt;/button&gt;</span>
-<span class="cstat-no" title="statement not covered" >          );</span>
-        })}
-      &lt;/div&gt;
-    &lt;/&gt;
-  );
+    return (
+        &lt;&gt;
+            &lt;div
+                className={`grid ${
+                    selected == 2
+<span class="cstat-no" title="statement not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >                        ? "md:grid-cols-2 grid-cols-1"</span></span>
+                        : "md:grid-cols-3 grid-cols-1"
+                } gap-2 items-center justify-center md:w-2/4 w-full mt-4`}
+            &gt;
+                {randomColors<span class="branch-0 cbranch-no" title="branch not covered" >?.map((item, index) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                    return (</span>
+<span class="cstat-no" title="statement not covered" >                        &lt;button</span>
+<span class="cstat-no" title="statement not covered" >                            key={index}</span>
+<span class="cstat-no" title="statement not covered" >                            onClick={() =&gt; verifyAnswer(item, timeLeft)}</span>
+<span class="cstat-no" title="statement not covered" >                            className="py-4 text-center font-bold border-2 border-slate-400 text-slate-400 hover:scale-105 hover:bg-slate-400 hover:text-slate-700 rounded-md transition-all ease-in-out duration-300"</span>
+<span class="cstat-no" title="statement not covered" >                        &gt;</span>
+<span class="cstat-no" title="statement not covered" >                            #{item}</span>
+<span class="cstat-no" title="statement not covered" >                        &lt;/button&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    );</span>
+                })}
+            &lt;/div&gt;
+        &lt;/&gt;
+    );
 };
 &nbsp;</pre></td></tr></table></pre>
 
@@ -154,7 +169,7 @@ export const Buttons = () =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-11-22T21:11:44.013Z
+                at 2022-11-25T20:16:03.786Z
             </div>
         <script src="../prettify.js"></script>
         <script>
